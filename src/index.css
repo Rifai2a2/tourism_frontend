@@ -1,0 +1,37 @@
+@import "tailwindcss";
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #EC764E, #86432C);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.card-animate {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.card-animate.delay-1 { animation-delay: 0.2s; }
+.card-animate.delay-2 { animation-delay: 0.4s; }
+.card-animate.delay-3 { animation-delay: 0.6s; }
+.card-animate.delay-4 { animation-delay: 0.8s; }
+.card-animate.delay-5 { animation-delay: 0.10s; }
+.card-animate.delay-6 { animation-delay: 0.12s; }
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
